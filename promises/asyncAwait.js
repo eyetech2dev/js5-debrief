@@ -16,3 +16,17 @@ Then check the promise (consume the promise).
 //Create a promise.
 
 //Consume the promise using async...await.
+const birthParty = new Promise((resolve, reject) =>{
+    let isRaining = true 
+    if(isRaining){
+        resolve("Oh no it's raining!! No party today...")
+    } else {
+        reject("No rain today! Let's celebrate!")
+    }
+});
+
+const partyHappening = async () =>{
+    let result = await birthParty;
+    console.log(result)
+}
+partyHappening();

@@ -16,3 +16,21 @@ Then check the promise (consume the promise).
 //Create a promise.
 
 //Consume the promise using then() and catch().
+const birthParty = new Promise((resolve, reject) =>{
+    let isRaining = false 
+    if(isRaining){
+        resolve("Oh no it's raining!! No party today...")
+    } else {
+        reject("No rain today! Let's celebrate!")
+    }
+});
+
+birthParty
+.then(fulfilled => {
+    console.log(fulfilled)
+})
+.catch(error => {
+    console.log(error)
+})
+
+// Anth, Edom, Kath, Yue

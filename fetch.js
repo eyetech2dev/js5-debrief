@@ -11,6 +11,20 @@ const postBtn = document.getElementById("post-btn");
 // b) second .then() : finally, chain another .then that takes the output and returns it. Don't forget to console log the reponse to see it on the browser console.
 // c) write a .catch() to handle an error, if it occurs
 
+fetch("https://reqres.in/api/users?page=2")
+    .then(response => {
+        return response.json()
+    }
+    )
+    .then(data => {
+        console.log(data)
+    }
+
+    )
+    .catch(error => {
+        console.log(error)
+    });
+
 // 2. Create a fetch SET method: create a function called sendData
 
 // hints: optional, can do on your own if you want
